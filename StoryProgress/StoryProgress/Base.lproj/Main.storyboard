@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X37-1z-kHD" customClass="SegmentedProgressView">
+                                <rect key="frame" x="0.0" y="48" width="600" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="BJ2-Wh-O2x"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kgX-Sp-FT0">
+                                <rect key="frame" x="27" y="144" width="118" height="30"/>
+                                <state key="normal" title="Add segment"/>
+                                <connections>
+                                    <action selector="addSegment" destination="BYZ-38-t0r" eventType="touchUpInside" id="7CK-q3-rPH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q2D-Xw-Dyh">
+                                <rect key="frame" x="27" y="182" width="119" height="30"/>
+                                <state key="normal" title="Remove segment"/>
+                                <connections>
+                                    <action selector="removeSegment:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hd6-Po-yGw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="33m-DD-wT6">
+                                <rect key="frame" x="86" y="259" width="72" height="30"/>
+                                <state key="normal" title="Progress 1"/>
+                                <connections>
+                                    <action selector="prog1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fXq-gr-Kc6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e3L-aF-2pz">
+                                <rect key="frame" x="192" y="259" width="74" height="30"/>
+                                <state key="normal" title="Progress 2"/>
+                                <connections>
+                                    <action selector="prog2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qd6-Rw-RXO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="APZ-x6-IvA">
+                                <rect key="frame" x="45" y="306" width="46" height="30"/>
+                                <state key="normal" title="RESET"/>
+                                <connections>
+                                    <action selector="reset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eeY-eX-feI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="X37-1z-kHD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="5dZ-Qj-wz2"/>
+                            <constraint firstAttribute="trailing" secondItem="X37-1z-kHD" secondAttribute="trailing" id="X38-u4-Jwo"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="progress" destination="X37-1z-kHD" id="8tY-1v-urS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="354"/>
+        </scene>
+    </scenes>
+</document>
